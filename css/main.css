@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Sriracha', cursive;
+    background-image: url('../imges/poke-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 5rem;
+    margin: 40px auto;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+}
+
+.poke-container {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    margin: 50px auto;
+    grid-gap: 10px;
+}
+
+.poke-card {
+    width: 200px;
+    border: 1px solid rgb(238, 178, 15);
+    text-align: center;
+    background-color: rgb(189, 16, 16);
+    box-shadow: 5px 4px #efb20f;
+}
+
+.poke-card h1, .poke-card h3 {
+    text-transform: capitalize;
+    color: white;
+}
+
+.poke-card .poke-img {
+    flex-basis: 50%;
+    height: 130px;
+    animation-name: slide;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: all 0.2s;
+}
+
+@keyframes slide {
+    0% {opacity: 1; transform: translateX(50px);}
+    30% {opacity: 6; transform: translateX(25px);}
+    60% {opacity: 3; transform: translateX(0px);}
+    100% {opacity: 0; transform: translateX(-75px);}
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.col {
+    flex-direction: column;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
